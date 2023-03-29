@@ -30,7 +30,7 @@ createApp({
       ],
      
     
-    
+    },
     methods: {
       next() {
         console.log(this.next);
@@ -54,7 +54,7 @@ createApp({
         
       
       
-    }
+    
     }
   }
 }).mount('#app')
