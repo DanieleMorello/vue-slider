@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Slider</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <div id="app">
+
+    <div class="slider">
+      <div class="slides">
+        <div v-for="(slide, index) in images" :key="index" :class="{ 'slide': true, 'active': index === activeSlide }">
+          <img :src="`./assets/${slide.image}`" alt="">
+          <div class="text">
+            <h3>{{ slide.title }}</h3>
+            <p>{{ slide.text }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="thumbs">
+        <img v-for="(slide, index) in images" :key="index" :src="`./assets/${slide.image}`" :class="{ 'active': index === activeSlide }" @click="activateSlide(index)">
+      </div>
+      <div class="controls">
+        <!-- <button class="prev" @click="prev"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+        <button class="next" @click="next"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button> -->
+        <!-- <button class="revert" @click="invertAutoplay">Invert Autoplay</button> -->
+      </div>
+    </div>
+  </div>  
+  <!-- Vue Js -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- App Js -->
+  <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
