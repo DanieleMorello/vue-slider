@@ -49,5 +49,8 @@ createApp({
         this.activeSlide = this.images.length - 1;
       }
     },
+    activateSlide(index) {
+      this.activeSlide = index;
+  }
   },
 }).mount("#app");
