@@ -29,25 +29,32 @@ createApp({
         }
       ],
      
-    }
+    
     
     methods: {
-      // next() {
-      //   if (this.activeSlide === slide.length - 1) {
-      //     this.activeSlide = 0
-      //   } else {
-      //     this.activeSlide++
-      //   }
-      // }
-      // prev() {
-      //   if (this.activeSlide === 0) {
-      //     this.activeSlide = images.length - 1
-      //   } else {
-      //     this.activeSlide--
-      //   }
-      // }
+      next() {
+        console.log(this.next);
+        // if (this.activeSlide === this.slide.length - 1) {
+          
+        //   this.activeSlide = 0
+        // } else {
+        //   this.activeSlide++
+        // }
+      },
+       
       
-    
+      prev() {
+        console.log(this.prev);
+        // if (this.activeSlide === 0) {
+        //   this.activeSlide = this.slide.length - 1
+        // } else {
+        //   this.activeSlide--
+        // }
+      }
+        
+      
+      
+    }
     }
   }
 }).mount('#app')
