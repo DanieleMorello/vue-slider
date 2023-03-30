@@ -12,8 +12,14 @@
 
   <div id="app">
 
+    <header>
+      <h1>Carosello</h1>
+    </header>
+
     <div class="container slider">
+
       <div class="slides"  @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
+
         <div class="slide" :class="{'active': index === activeSlide }">
           <img :src="'./assets/'+ images[activeSlide].image" :alt="images[activeSlide].title">
           <div class="text">
@@ -21,16 +27,25 @@
             <p>{{ images[activeSlide].text }}</p>
           </div>
         </div>
+        
       </div>
+
       <div class="thumbs">
         <img v-for="(slide, index) in images" :key="index" :src="`./assets/${slide.image}`" :class="{ 'active': index === activeSlide }" @click="activateSlide(index)">
       </div>
+
       <div class="controls">
         <button class="prev" @click="prev"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
         <button class="next" @click="next"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
         <!-- <button class="revert" @click="invertAutoplay">Invert Autoplay</button> -->
       </div>
+
     </div>
+
+    <footer>
+      <p>Copyright &copy; <time>2023</time> - Daniele Morello Classe 91 Boolean</p>
+    </footer>
+
   </div>  
   <!-- Vue Js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
