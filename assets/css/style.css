@@ -68,11 +68,6 @@ button.next
 	height: 100%;
 }
 
-.slide:not(.active)
-{
-	display: none;
-}
-
 .slide .text
 {
 	color: white;

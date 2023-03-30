@@ -14,11 +14,11 @@
 
     <div class="container slider">
       <div class="slides"  @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
-        <div v-for="(slide, index) in images" :key="index" :class="{ 'slide': true, 'active': index === activeSlide }">
-          <img :src="`./assets/${slide.image}`" alt="">
+        <div class="slide" :class="{'active': index === activeSlide }">
+          <img :src="'./assets/'+ images[activeSlide].image" :alt="images[activeSlide].title">
           <div class="text">
-            <h3>{{ slide.title }}</h3>
-            <p>{{ slide.text }}</p>
+            <h3>{{ images[activeSlide].title }}</h3>
+            <p>{{ images[activeSlide].text }}</p>
           </div>
         </div>
       </div>
