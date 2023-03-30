@@ -53,13 +53,13 @@ createApp({
     activateSlide(index) {
       this.activeSlide = index;
   },
-  stopAutoplay() {
-    clearInterval(this.autoplay);
-  },
   startAutoplay() {
     this.autoplay = setInterval(() => {
       this.next();
     }, 3000);
+  },
+  stopAutoplay() {
+    clearInterval(this.autoplay);
   }
 },
 mounted() {
