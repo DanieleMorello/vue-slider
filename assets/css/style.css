@@ -11,6 +11,9 @@ img
 }
 
 header, footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	height: 3rem;
 	background-color: black;
@@ -113,9 +116,6 @@ button.next
 
 footer
 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	position: fixed;
 	bottom: 0;
 	left: 0;
